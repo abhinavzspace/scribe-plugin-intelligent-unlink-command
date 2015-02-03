@@ -1,4 +1,4 @@
-define(['scribe-common/src/element'], function (element) {
+define([], function () {
 
   /**
    * This plugin modifies the `unlink` command so that, when the user's
@@ -9,6 +9,8 @@ define(['scribe-common/src/element'], function (element) {
 
   return function () {
     return function (scribe) {
+      var element = scribe.element;
+      
       var unlinkCommand = new scribe.api.Command('unlink');
 
       unlinkCommand.execute = function () {
